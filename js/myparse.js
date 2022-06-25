@@ -36,18 +36,17 @@ document.querySelector('button').onclick = () => {
             value = true;
             return value;
           }
-         if (token.includes("false")) {
+          if (token.includes("false")) {
             value = false;
             return value;
           }
-
-          else {return value = token.trim().replace(/"/g,'')};}     
+          else {return value = token.trim().replace(/"/g,'')};}   
+          
           value = Parseador(token);
           isKey = true;
+          
           json[key] = value;
       });
-    
-    
     
     console.log(`                             
             ██████████████            
@@ -78,4 +77,4 @@ document.querySelector('button').onclick = () => {
 
 return jsonInput, json
 
-}
+};
