@@ -5,10 +5,10 @@ let promesa = false
 //primera funcion asincronica forma 1
 async function functionAsync (a,b) {
   const response = await fetch(a);
-  let data = await response.json();
-if(b== "users"){
-data.forEach(element => {
- const {phone,...rest} = element;
+  let data       = await response.json();
+  if(b== "users"){
+  data.forEach(element => {
+  const {phone,...rest} = element;
  
  delete rest.address.zipcode;
  delete rest.address.geo.lat;
@@ -44,7 +44,7 @@ function functionPromise (a,b) {
   if(b == "albums"){
   fetch(a)
   .then(response => {
-    return response.json();
+   return response.json();
   })
 
   .then(data => { 
@@ -57,8 +57,7 @@ function functionPromise (a,b) {
 function getUser(a) {
  if (a) {
   return functionAsync("https://jsonplaceholder.typicode.com/users","users");
- }
-  else {
+ } else {
     return functionPromise("https://jsonplaceholder.typicode.com/users","users");
   };
  }
