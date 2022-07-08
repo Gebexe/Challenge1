@@ -1,7 +1,7 @@
 //modulo de node HTTP, se utiliza para levantar el servidor
 const http = require("http");
 
-const host = "localhost";
+const host = "hostname";
 const port = 8000;
 
 //clase usuario que nos permitira construir un usuario con la informacion de id, firstname, lastname, age, y country
@@ -46,4 +46,4 @@ const usuarioListener = function (req, res) {
 //levantamos el server y damos notificacion en console.log
 
 const server = http.createServer(usuarioListener);
-server.listen(port,host, () => console.log ('web iniciada en "http://localhost:8000/usuarios"'));
+server.listen(port,host, () => console.log ('web iniciada en "http://hostname:8000/usuarios"'));
