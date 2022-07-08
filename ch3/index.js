@@ -26,8 +26,8 @@ const todosusuarios = [
     
 ];
 
-exports.todosusuarios = todosusuarios
-exports.Usuario= Usuario
+exports.todosusuarios = todosusuarios;
+exports.Usuario= Usuario;
 //funcion usuarioListener que nos dara una aplicacion JSON con la info de los usuarios que construimos anteriormente, tiene un switch que nos permite catchear 
 //cualquier direccion que no sea /usuario
 
