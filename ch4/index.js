@@ -6,16 +6,9 @@ const mongoose = require("mongoose");
 const mongoString = process.env.DATABASE_URL;
 
 // Sección de conexión a la base de datos.
-mongoose.connect(mongoString);
-const database = mongoose.connection;
-
-database.on("error", (error) => {
-    console.error(error);
-});
-
-database.once("connected", () => {
-    console.log("Base de datos conectada.");
-});
+mongoose.connect(mongoString)
+.then(console.log("conectado"))
+.catch((error)=>console.log(error));
 
 // Sección de aplicación (servidor web).
 const app = express();
